@@ -1,0 +1,237 @@
+//Colors
+$main: #000;
+$norm-blue:#4d9db8;
+$dark-blue:#2185a6;
+$yellow:#feb31c;
+$yellow2:#feca61;
+$tb:#fcfcfc;
+$w-grey: #f4f4f4;
+// Animation
+$burger2AnimationTime: .15s;
+//Style
+html{
+    width: 100%;
+}
+
+body{
+    position: relative;
+    background: $w-grey;
+    width: 150vh;
+}
+input {
+	display: none;
+}
+
+
+
+/* ===------ Burger Base ------=== */
+.burger {
+    top: 5px;
+	width: 30px;
+	height: 30px;
+	
+	position: relative;
+	
+	overflow: hidden;
+	
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	label {
+		width: 30px;
+		height: 30px;
+		
+		display: block;
+		
+		transition: all $burger2AnimationTime;
+	
+		cursor: pointer;
+	}
+}
+.bar {
+	width: 100%;
+	height: 3px;
+	
+	display: block;
+	
+	position: absolute;
+	left: 0;
+	
+	background: $main;
+	border-radius: 10px;
+	
+	transition: all $burger2AnimationTime;
+	pointer-events: none;
+}
+.bar-1 {
+	top: 0px;
+}
+.bar-2 {
+	top: 9px;
+}
+.bar-3 {
+	top: 18px;
+}
+.txt {
+	display: none;
+}
+
+
+
+/* ===------ Burger 1 ------=== */
+.burger-1 {
+	input:checked ~ label {
+		.bar-1 {
+			top: 18px;
+			
+			transform: rotate(45deg);
+		}
+		.bar-2 {
+			left: -100%;
+		}
+		.bar-3 {
+			top: 18px;
+			
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+
+
+/* ===------ Burger 2 ------=== */
+@keyframes a-burger2bar1 {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: 9px;
+		transform: rotate(0);
+	}
+	100% {
+		top: 9px;
+		transform: rotate(45deg);
+	}
+}
+@keyframes a-burger2bar2 {
+	0% {}
+	50% {}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes a-burger2bar3 {
+	0% {
+		top: 18px;
+	}
+	50% {
+		top: 9px;
+		transform: rotate(0);
+	}
+	100% {
+		top: 9px;
+		transform: rotate(-45deg);
+	}
+}
+.burger-2 {
+	input:checked ~ label {
+		.bar-1 {
+			animation: a-burger2bar1 $burger2AnimationTime forwards;
+		}
+		.bar-2 {
+			animation: a-burger2bar2 $burger2AnimationTime forwards;
+		}
+		.bar-3 {
+			animation: a-burger2bar3 $burger2AnimationTime forwards;
+		}
+	}
+}
+
+
+
+/* ===------ Burger 3 ------=== */
+.burger-3 {
+	input:checked ~ label {
+		transform: rotate(90deg);
+
+		.bar-1 {
+			top: 18px;
+			transform: rotate(45deg);
+		}
+		.bar-2 {
+			left: 100%;
+		}
+		.bar-3 {
+			top: 18px;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+#MenuIcon{
+    height: 37px;
+    width: 37px;
+    top: 10px;
+    left: 10px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+#logo{
+    background: $norm-blue;
+    height: 100px;
+    width: 240px;
+    color: #fff;
+    
+    & h4{
+        font-weight: bold;
+        display: inline-block;
+    }
+    & img{
+        display: inline-block;
+        padding: 38px 15px;
+    }
+}
+#MainMenu{
+    height: 100vh;
+    width: 240px;
+    background-color: $dark-blue;
+    position: fixed;
+    left: 0px;
+    top:0;
+    & a{
+        display: inline-block;
+    }
+    & p{
+        display: inline-block;
+    }
+    & img{
+        display: inline-block;
+    }
+}
+ul{
+    font-size: 14px;
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0;
+    & li{
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding: 25px 0px 25px 33px !important;
+        @include transition(.2s ease-in-out);
+        & p{
+            margin: 0;
+            margin-left: 26px;
+        }
+        &:hover{
+            background: darken($dark-blue, 20%);
+        }
+    }
+}
+.active{
+    border-left:3px solid #fff;
+    padding-left: 30px !important;
+    &>a{
+       color: #fff !important;
+    }
+}
