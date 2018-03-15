@@ -2,7 +2,7 @@
 $main: #000;
 $norm-blue:#4d9db8;
 $dark-blue:#2185a6;
-$yellow:#feb31c;
+$yellow1:#feb31c;
 $yellow2:#feca61;
 $tb:#fcfcfc;
 $w-grey: #f4f4f4;
@@ -16,7 +16,6 @@ html{
 body{
     position: relative;
     background: $w-grey;
-    width: 150vh;
 }
 input {
 	display: none;
@@ -27,8 +26,8 @@ input {
 /* ===------ Burger Base ------=== */
 .burger {
     top: 5px;
-	width: 30px;
-	height: 30px;
+	width: 22px;
+	height: 22px;
 	
 	position: relative;
 	
@@ -38,8 +37,8 @@ input {
 	margin-right: 0px;
 	
 	label {
-		width: 30px;
-		height: 30px;
+		width: 22px;
+		height: 22px;
 		
 		display: block;
 		
@@ -48,9 +47,17 @@ input {
 		cursor: pointer;
 	}
 }
+#content{
+    position: relative;
+    display: inline-block;
+}
+.l{
+    padding-left: 240px;
+    right: 0;
+}
 .bar {
 	width: 100%;
-	height: 3px;
+	height: 2px;
 	
 	display: block;
 	
@@ -133,19 +140,19 @@ input {
 		transform: rotate(-45deg);
 	}
 }
-.burger-2 {
-	input:checked ~ label {
-		.bar-1 {
-			animation: a-burger2bar1 $burger2AnimationTime forwards;
-		}
-		.bar-2 {
-			animation: a-burger2bar2 $burger2AnimationTime forwards;
-		}
-		.bar-3 {
-			animation: a-burger2bar3 $burger2AnimationTime forwards;
-		}
-	}
-}
+//.burger-2 {
+//	input:checked ~ label {
+//		.bar-1 {
+//			animation: a-burger2bar1 $burger2AnimationTime forwards;
+//		}
+//		.bar-2 {
+//			animation: a-burger2bar2 $burger2AnimationTime forwards;
+//		}
+//		.bar-3 {
+//			animation: a-burger2bar3 $burger2AnimationTime forwards;
+//		}
+//	}
+//}
 
 
 
@@ -168,13 +175,42 @@ input {
 	}
 }
 
+#MenuLine{
+    background: $yellow1;
+    padding: 19px 25px;
+    & .u{
+        display: inline-block;
+        padding-left: 30px;
+        margin-top: 5px;
+        & h4{
+        line-height: 0.6;
+        padding: 0;
+        font-weight: bold !important;
+        }
+        & a{
+            color: #000 !important;
+        }
+    }
+    & .r>input{
+        height: 30px;
+        width: 100px;
+    }
+    &>.btn{
+        margin-top: 13px;
+        &.btn-white{
+            
+        }
+    }
+}
+.btn.btn-white:hover{background: #fffffff5 !important;}
 #MenuIcon{
     height: 37px;
     width: 37px;
-    top: 10px;
-    left: 10px;
+    top: -10px;
+    display: inline-block;
+    position: relative;
     &:hover{
-        cursor: pointer;
+    cursor: pointer;
     }
 }
 #logo{
@@ -234,4 +270,13 @@ ul{
     &>a{
        color: #fff !important;
     }
+}
+.float-right{
+    float: right;
+}
+.input-group[class*="col-"] {
+    float: right;
+    top: 14px;
+    margin-right: 100px;
+
 }

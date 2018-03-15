@@ -3809,7 +3809,7 @@ output {
   padding-top: 7px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
+  color: #000;
 }
 
 /* line 114, ../scss/bootstrap/_forms.scss */
@@ -3820,11 +3820,11 @@ output {
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
-  color: #555555;
-  background-color: #fff;
+  color: #000;
+  background-color: #feca61;
   background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid rgba(204, 204, 204, 0);
+  border-radius: 10px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -3833,23 +3833,23 @@ output {
 }
 /* line 57, ../scss/bootstrap/mixins/_forms.scss */
 .form-control:focus {
-  border-color: #66afe9;
+  border-color: rgba(254, 179, 28, 0);
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 179, 28, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(254, 179, 28, 0.6);
 }
 /* line 103, ../scss/bootstrap/mixins/_vendor-prefixes.scss */
 .form-control::-moz-placeholder {
-  color: #999;
+  color: #000;
   opacity: 1;
 }
 /* line 107, ../scss/bootstrap/mixins/_vendor-prefixes.scss */
 .form-control:-ms-input-placeholder {
-  color: #999;
+  color: #000;
 }
 /* line 108, ../scss/bootstrap/mixins/_vendor-prefixes.scss */
 .form-control::-webkit-input-placeholder {
-  color: #999;
+  color: #000;
 }
 /* line 136, ../scss/bootstrap/_forms.scss */
 .form-control::-ms-expand {
@@ -3858,7 +3858,7 @@ output {
 }
 /* line 146, ../scss/bootstrap/_forms.scss */
 .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
-  background-color: #eeeeee;
+  background-color: #000;
   opacity: 1;
 }
 /* line 153, ../scss/bootstrap/_forms.scss */
@@ -4735,35 +4735,80 @@ a.btn.disabled, fieldset[disabled] a.btn {
   background-color: #fff;
 }
 
-/* line 96, ../scss/bootstrap/_buttons.scss */
+/* line 90, ../scss/bootstrap/_buttons.scss */
+.btn-white {
+  color: #feb31c;
+  background-color: #ffffff;
+  border-color: #f2f2f2;
+}
+/* line 11, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white:focus, .btn-white.focus {
+  color: #feb31c;
+  background-color: #e6e6e6;
+  border-color: #b3b3b3;
+}
+/* line 17, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white:hover {
+  color: #feb31c;
+  background-color: #e6e6e6;
+  border-color: #d4d4d4;
+}
+/* line 22, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white:active, .btn-white.active, .open > .btn-white.dropdown-toggle {
+  color: #feb31c;
+  background-color: #e6e6e6;
+  border-color: #d4d4d4;
+}
+/* line 29, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white:active:hover, .btn-white:active:focus, .btn-white:active.focus, .btn-white.active:hover, .btn-white.active:focus, .btn-white.active.focus, .open > .btn-white.dropdown-toggle:hover, .open > .btn-white.dropdown-toggle:focus, .open > .btn-white.dropdown-toggle.focus {
+  color: #feb31c;
+  background-color: #d4d4d4;
+  border-color: #b3b3b3;
+}
+/* line 37, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white:active, .btn-white.active, .open > .btn-white.dropdown-toggle {
+  background-image: none;
+}
+/* line 45, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white.disabled:hover, .btn-white.disabled:focus, .btn-white.disabled.focus, .btn-white[disabled]:hover, .btn-white[disabled]:focus, .btn-white[disabled].focus, fieldset[disabled] .btn-white:hover, fieldset[disabled] .btn-white:focus, fieldset[disabled] .btn-white.focus {
+  background-color: #ffffff;
+  border-color: #f2f2f2;
+}
+/* line 53, ../scss/bootstrap/mixins/_buttons.scss */
+.btn-white .badge {
+  color: #ffffff;
+  background-color: #feb31c;
+}
+
+/* line 99, ../scss/bootstrap/_buttons.scss */
 .btn-link {
   color: #99c7d5;
   font-weight: normal;
   border-radius: 0;
 }
-/* line 101, ../scss/bootstrap/_buttons.scss */
+/* line 104, ../scss/bootstrap/_buttons.scss */
 .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-/* line 109, ../scss/bootstrap/_buttons.scss */
+/* line 112, ../scss/bootstrap/_buttons.scss */
 .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
   border-color: transparent;
 }
-/* line 115, ../scss/bootstrap/_buttons.scss */
+/* line 118, ../scss/bootstrap/_buttons.scss */
 .btn-link:hover, .btn-link:focus {
   color: #75b4c6;
   text-decoration: none;
   background-color: transparent;
 }
-/* line 123, ../scss/bootstrap/_buttons.scss */
+/* line 126, ../scss/bootstrap/_buttons.scss */
 .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
   color: #777777;
   text-decoration: none;
 }
 
-/* line 135, ../scss/bootstrap/_buttons.scss */
+/* line 138, ../scss/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
   font-size: 18px;
@@ -4771,7 +4816,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   border-radius: 6px;
 }
 
-/* line 139, ../scss/bootstrap/_buttons.scss */
+/* line 142, ../scss/bootstrap/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
   font-size: 12px;
@@ -4779,7 +4824,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
   border-radius: 3px;
 }
 
-/* line 143, ../scss/bootstrap/_buttons.scss */
+/* line 146, ../scss/bootstrap/_buttons.scss */
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
   font-size: 12px;
@@ -4787,18 +4832,18 @@ a.btn.disabled, fieldset[disabled] a.btn {
   border-radius: 3px;
 }
 
-/* line 151, ../scss/bootstrap/_buttons.scss */
+/* line 154, ../scss/bootstrap/_buttons.scss */
 .btn-block {
   display: block;
   width: 100%;
 }
 
-/* line 157, ../scss/bootstrap/_buttons.scss */
+/* line 160, ../scss/bootstrap/_buttons.scss */
 .btn-block + .btn-block {
   margin-top: 5px;
 }
 
-/* line 165, ../scss/bootstrap/_buttons.scss */
+/* line 168, ../scss/bootstrap/_buttons.scss */
 input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
@@ -5320,11 +5365,11 @@ tbody.collapse.in {
   font-size: 14px;
   font-weight: normal;
   line-height: 1;
-  color: #555555;
+  color: #000;
   text-align: center;
-  background-color: #eeeeee;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  background-color: #feca61;
+  border: 1px solid rgba(204, 204, 204, 0);
+  border-radius: 10px;
 }
 /* line 89, ../scss/bootstrap/_input-groups.scss */
 .input-group-addon.input-sm,
@@ -8797,38 +8842,49 @@ html {
 body {
   position: relative;
   background: #f4f4f4;
-  width: 150vh;
 }
 
-/* line 21, ../scss/_my-code.scss */
+/* line 20, ../scss/_my-code.scss */
 input {
   display: none;
 }
 
 /* ===------ Burger Base ------=== */
-/* line 28, ../scss/_my-code.scss */
+/* line 27, ../scss/_my-code.scss */
 .burger {
   top: 5px;
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   position: relative;
   overflow: hidden;
   margin-left: 0px;
   margin-right: 0px;
 }
-/* line 40, ../scss/_my-code.scss */
+/* line 39, ../scss/_my-code.scss */
 .burger label {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   display: block;
   transition: all 0.15s;
   cursor: pointer;
 }
 
-/* line 51, ../scss/_my-code.scss */
+/* line 50, ../scss/_my-code.scss */
+#content {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 54, ../scss/_my-code.scss */
+.l {
+  padding-left: 240px;
+  right: 0;
+}
+
+/* line 58, ../scss/_my-code.scss */
 .bar {
   width: 100%;
-  height: 3px;
+  height: 2px;
   display: block;
   position: absolute;
   left: 0;
@@ -8838,37 +8894,37 @@ input {
   pointer-events: none;
 }
 
-/* line 66, ../scss/_my-code.scss */
+/* line 73, ../scss/_my-code.scss */
 .bar-1 {
   top: 0px;
 }
 
-/* line 69, ../scss/_my-code.scss */
+/* line 76, ../scss/_my-code.scss */
 .bar-2 {
   top: 9px;
 }
 
-/* line 72, ../scss/_my-code.scss */
+/* line 79, ../scss/_my-code.scss */
 .bar-3 {
   top: 18px;
 }
 
-/* line 75, ../scss/_my-code.scss */
+/* line 82, ../scss/_my-code.scss */
 .txt {
   display: none;
 }
 
 /* ===------ Burger 1 ------=== */
-/* line 84, ../scss/_my-code.scss */
+/* line 91, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-1 {
   top: 18px;
   transform: rotate(45deg);
 }
-/* line 89, ../scss/_my-code.scss */
+/* line 96, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-2 {
   left: -100%;
 }
-/* line 92, ../scss/_my-code.scss */
+/* line 99, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-3 {
   top: 18px;
   transform: rotate(-45deg);
@@ -8906,70 +8962,94 @@ input {
     transform: rotate(-45deg);
   }
 }
-/* line 138, ../scss/_my-code.scss */
-.burger-2 input:checked ~ label .bar-1 {
-  animation: a-burger2bar1 0.15s forwards;
-}
-/* line 141, ../scss/_my-code.scss */
-.burger-2 input:checked ~ label .bar-2 {
-  animation: a-burger2bar2 0.15s forwards;
-}
-/* line 144, ../scss/_my-code.scss */
-.burger-2 input:checked ~ label .bar-3 {
-  animation: a-burger2bar3 0.15s forwards;
-}
-
 /* ===------ Burger 3 ------=== */
-/* line 154, ../scss/_my-code.scss */
+/* line 161, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label {
   transform: rotate(90deg);
 }
-/* line 157, ../scss/_my-code.scss */
+/* line 164, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-1 {
   top: 18px;
   transform: rotate(45deg);
 }
-/* line 161, ../scss/_my-code.scss */
+/* line 168, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-2 {
   left: 100%;
 }
-/* line 164, ../scss/_my-code.scss */
+/* line 171, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-3 {
   top: 18px;
   transform: rotate(-45deg);
 }
 
-/* line 171, ../scss/_my-code.scss */
+/* line 178, ../scss/_my-code.scss */
+#MenuLine {
+  background: #feb31c;
+  padding: 19px 25px;
+}
+/* line 181, ../scss/_my-code.scss */
+#MenuLine .u {
+  display: inline-block;
+  padding-left: 30px;
+  margin-top: 5px;
+}
+/* line 185, ../scss/_my-code.scss */
+#MenuLine .u h4 {
+  line-height: 0.6;
+  padding: 0;
+  font-weight: bold !important;
+}
+/* line 190, ../scss/_my-code.scss */
+#MenuLine .u a {
+  color: #000 !important;
+}
+/* line 194, ../scss/_my-code.scss */
+#MenuLine .r > input {
+  height: 30px;
+  width: 100px;
+}
+/* line 198, ../scss/_my-code.scss */
+#MenuLine > .btn {
+  margin-top: 13px;
+}
+
+/* line 205, ../scss/_my-code.scss */
+.btn.btn-white:hover {
+  background: #fffffff5 !important;
+}
+
+/* line 206, ../scss/_my-code.scss */
 #MenuIcon {
   height: 37px;
   width: 37px;
-  top: 10px;
-  left: 10px;
+  top: -10px;
+  display: inline-block;
+  position: relative;
 }
-/* line 176, ../scss/_my-code.scss */
+/* line 212, ../scss/_my-code.scss */
 #MenuIcon:hover {
   cursor: pointer;
 }
 
-/* line 180, ../scss/_my-code.scss */
+/* line 216, ../scss/_my-code.scss */
 #logo {
   background: #4d9db8;
   height: 100px;
   width: 240px;
   color: #fff;
 }
-/* line 186, ../scss/_my-code.scss */
+/* line 222, ../scss/_my-code.scss */
 #logo h4 {
   font-weight: bold;
   display: inline-block;
 }
-/* line 190, ../scss/_my-code.scss */
+/* line 226, ../scss/_my-code.scss */
 #logo img {
   display: inline-block;
   padding: 38px 15px;
 }
 
-/* line 195, ../scss/_my-code.scss */
+/* line 231, ../scss/_my-code.scss */
 #MainMenu {
   height: 100vh;
   width: 240px;
@@ -8978,27 +9058,27 @@ input {
   left: 0px;
   top: 0;
 }
-/* line 202, ../scss/_my-code.scss */
+/* line 238, ../scss/_my-code.scss */
 #MainMenu a {
   display: inline-block;
 }
-/* line 205, ../scss/_my-code.scss */
+/* line 241, ../scss/_my-code.scss */
 #MainMenu p {
   display: inline-block;
 }
-/* line 208, ../scss/_my-code.scss */
+/* line 244, ../scss/_my-code.scss */
 #MainMenu img {
   display: inline-block;
 }
 
-/* line 212, ../scss/_my-code.scss */
+/* line 248, ../scss/_my-code.scss */
 ul {
   font-size: 14px;
   font-weight: bold;
   list-style: none;
   padding-left: 0;
 }
-/* line 217, ../scss/_my-code.scss */
+/* line 253, ../scss/_my-code.scss */
 ul li {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -9007,22 +9087,34 @@ ul li {
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-/* line 222, ../scss/_my-code.scss */
+/* line 258, ../scss/_my-code.scss */
 ul li p {
   margin: 0;
   margin-left: 26px;
 }
-/* line 226, ../scss/_my-code.scss */
+/* line 262, ../scss/_my-code.scss */
 ul li:hover {
   background: #104151;
 }
 
-/* line 231, ../scss/_my-code.scss */
+/* line 267, ../scss/_my-code.scss */
 .active {
   border-left: 3px solid #fff;
   padding-left: 30px !important;
 }
-/* line 234, ../scss/_my-code.scss */
+/* line 270, ../scss/_my-code.scss */
 .active > a {
   color: #fff !important;
+}
+
+/* line 274, ../scss/_my-code.scss */
+.float-right {
+  float: right;
+}
+
+/* line 277, ../scss/_my-code.scss */
+.input-group[class*="col-"] {
+  float: right;
+  top: 14px;
+  margin-right: 100px;
 }

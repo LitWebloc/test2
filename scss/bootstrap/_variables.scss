@@ -20,6 +20,7 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+$white:                 #ffffff !default;
 
 
 //== Scaffolding
@@ -108,6 +109,7 @@ $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Ch
 $line-height-small:         1.5 !default;
 
 $border-radius-base:        4px !default;
+$border-radius-base-input: 10px !default;
 $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
@@ -173,6 +175,10 @@ $btn-danger-color:               #fff !default;
 $btn-danger-bg:                  $brand-danger !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
+$btn-white-color:               #feb31c !default;
+$btn-white-bg:                  $white !default;
+$btn-white-border:              darken($btn-white-bg, 5%) !default;
+
 $btn-link-disabled-color:        $gray-light !default;
 
 // Allows for customizing button radius independently from global border radius
@@ -186,29 +192,29 @@ $btn-border-radius-small:        $border-radius-small !default;
 //##
 
 //** `<input>` background color
-$input-bg:                       #fff !default;
+$input-bg:                       #feca61 !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              $gray-lighter !default;
+$input-bg-disabled:              #000 !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray !default;
+$input-color:                    #000 !default;
 //** `<input>` border color
-$input-border:                   #ccc !default;
+$input-border:                   rgba(204, 204, 204, 0) !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-$input-border-radius:            $border-radius-base !default;
+$input-border-radius:            $border-radius-base-input !default;
 //** Large `.form-control` border radius
 $input-border-radius-large:      $border-radius-large !default;
 //** Small `.form-control` border radius
 $input-border-radius-small:      $border-radius-small !default;
 
 //** Border color for inputs on focus
-$input-border-focus:             #66afe9 !default;
+$input-border-focus:             rgba(254, 179, 28, 0) !default;
 
 //** Placeholder text color
-$input-color-placeholder:        #999 !default;
+$input-color-placeholder:        #000 !default;
 
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
@@ -224,7 +230,7 @@ $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-bg:           #feca61 !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
