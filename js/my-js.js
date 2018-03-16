@@ -1,10 +1,11 @@
+
 //menu
 $( "#burger2" ).change(function() {
     if(this.checked){
-  $("#MainMenu").hide("show",300);
+  $("#MainMenu").hide(50);
   $("#content").removeClass("l");
 } else{
-  $("#MainMenu").show();
+  $("#MainMenu").show(50);
     $("#content").addClass("l");
 }
 });

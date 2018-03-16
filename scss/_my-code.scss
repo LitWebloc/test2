@@ -190,7 +190,7 @@ input {
     position: fixed;
     background: $yellow1;
     padding: 19px 25px;
-    z-index: 99999;
+    z-index: 999;
     & .u{
         display: inline-block;
         padding-left: 30px;
@@ -243,13 +243,13 @@ input {
     background: #fff;
 }
 #MainMenu{
-    height: 100vh;
+    height: 100%;
     width: 240px;
     background-color: $dark-blue;
     position: fixed;
     left: 0px;
     top:0;
-    z-index: 99999;
+    z-index: 999;
     @include transition(.2s ease-in-out);
     & a{
         display: inline-block;
@@ -363,4 +363,89 @@ div.dropdown{
 .p{
     padding-top: 20px;
     padding-bottom: 20px;
+}
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+    z-index: 999;
+}
+
+.popup {
+	position: absolute;
+	width: 70%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	background-color: $w-grey;
+	color: #000;
+    &-header{
+        position: relative;
+        background: #fff;
+        width: 100%;
+        padding: 0;
+        top:-50px;
+        margin: 0;
+        display: inline-block;
+        & h2{
+        display: inline-block;
+        }
+    }
+    &-body{
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        padding: 40px;
+    }
+}
+
+.close-popup {
+	position: relative;
+	top: 25px;
+	float: right;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+    display: inline-block;
+    &:before {
+	content: '';
+	background-color: #fff;
+	position: relative;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	left: -4px;
+    transform: rotate(-45deg);
+    }
+    &:after {
+	content: '';
+	background-color: #fff;
+	position: relative;
+	height: 1px;
+	width: 31px;
+	top: 11px;
+	transform: rotate(45deg);
+	left: -4px;
+}
+}
+@media screen and (max-width: 768px) {
+
+	.popup {
+		width: 100%;
+		height: 100vh;
+		font-size: 15px;
+        margin-top: 50px;
+	}
+    .form-control{
+            display: inline-block;
+            top: 14px;
+            width: 30%;
+        margin: 0;
+
+    }
 }
