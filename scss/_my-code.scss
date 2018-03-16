@@ -8,6 +8,8 @@ $tb:#fcfcfc;
 $w-grey: #f4f4f4;
 // Animation
 $burger2AnimationTime: .15s;
+// Padding
+$tdp: 30px;
 //Style
 html{
     width: 100%;
@@ -50,6 +52,13 @@ input {
 #content{
     position: relative;
     display: inline-block;
+    &>#soder{
+        position: relative;
+        padding: 120px 20px 0px;
+    }
+}
+.row{
+    display: block !important;
 }
 .l{
     padding-left: 240px;
@@ -174,10 +183,14 @@ input {
 		}
 	}
 }
-
+.w{
+    width: 100%;
+}
 #MenuLine{
+    position: fixed;
     background: $yellow1;
     padding: 19px 25px;
+    z-index: 99999;
     & .u{
         display: inline-block;
         padding-left: 30px;
@@ -196,10 +209,8 @@ input {
         width: 100px;
     }
     &>.btn{
-        margin-top: 13px;
-        &.btn-white{
-            
-        }
+        margin-top: 10px;
+        padding: 10px;
     }
 }
 .btn.btn-white:hover{background: #fffffff5 !important;}
@@ -228,6 +239,9 @@ input {
         padding: 38px 15px;
     }
 }
+.white{
+    background: #fff;
+}
 #MainMenu{
     height: 100vh;
     width: 240px;
@@ -235,6 +249,8 @@ input {
     position: fixed;
     left: 0px;
     top:0;
+    z-index: 99999;
+    @include transition(.2s ease-in-out);
     & a{
         display: inline-block;
     }
@@ -278,5 +294,73 @@ ul{
     float: right;
     top: 14px;
     margin-right: 100px;
-
+}
+div.dropdown{
+    float: right;
+    top: 17px;
+    background: rgba(0, 0, 0, 0) !important;
+    margin-left: 35px;
+    display: inline-block !important;
+    & .btn{
+        box-shadow: none !important;
+        background: rgba(0, 0, 0, 0) !important;
+        border: none;
+    }
+    & a{
+        background: rgba(0, 0, 0, 0) !important;
+        display: block !important;
+    }
+}
+.btn{
+    @include transition(.2s ease-in-out);
+    &:focus{
+            outline: 0 !important;
+    }
+}
+.dropdown-menu{
+    background: $yellow2;
+    padding: 0;
+    border: none;
+    @include transition(.2s ease-in-out);
+    & a{
+        color: #fff;
+    }
+    &>.dropdown-item{
+        padding: 20px 0px;
+        padding-left: 20px;
+        @include transition(.2s ease-in-out);
+        &:hover{
+            background: $yellow1 !important;
+        }
+    }
+}
+.form-control{
+    box-shadow: none;
+}
+.table{
+    border: 1px solid #ccc;
+}
+.table > thead{
+    color: $yellow1;
+    &>tr>th{
+        padding: 15px $tdp;
+    }
+}
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+    border:1px solid #ccc;
+}
+.table>tbody>tr>th,td{
+    padding: $tdp !important;
+    padding-bottom: $tdp/2+3 !important;
+    &>p{
+        display: inline-block;
+        color: #aaa;
+    }
+}
+.table-striped > tbody > tr:nth-of-type(odd){
+    background: $tb;
+}
+.p{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

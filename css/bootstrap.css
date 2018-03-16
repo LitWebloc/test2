@@ -8833,24 +8833,24 @@ button.close {
     display: none !important;
   }
 }
-/* line 12, ../scss/_my-code.scss */
+/* line 14, ../scss/_my-code.scss */
 html {
   width: 100%;
 }
 
-/* line 16, ../scss/_my-code.scss */
+/* line 18, ../scss/_my-code.scss */
 body {
   position: relative;
   background: #f4f4f4;
 }
 
-/* line 20, ../scss/_my-code.scss */
+/* line 22, ../scss/_my-code.scss */
 input {
   display: none;
 }
 
 /* ===------ Burger Base ------=== */
-/* line 27, ../scss/_my-code.scss */
+/* line 29, ../scss/_my-code.scss */
 .burger {
   top: 5px;
   width: 22px;
@@ -8860,7 +8860,7 @@ input {
   margin-left: 0px;
   margin-right: 0px;
 }
-/* line 39, ../scss/_my-code.scss */
+/* line 41, ../scss/_my-code.scss */
 .burger label {
   width: 22px;
   height: 22px;
@@ -8869,19 +8869,29 @@ input {
   cursor: pointer;
 }
 
-/* line 50, ../scss/_my-code.scss */
+/* line 52, ../scss/_my-code.scss */
 #content {
   position: relative;
   display: inline-block;
 }
+/* line 55, ../scss/_my-code.scss */
+#content > #soder {
+  position: relative;
+  padding: 120px 20px 0px;
+}
 
-/* line 54, ../scss/_my-code.scss */
+/* line 60, ../scss/_my-code.scss */
+.row {
+  display: block !important;
+}
+
+/* line 63, ../scss/_my-code.scss */
 .l {
   padding-left: 240px;
   right: 0;
 }
 
-/* line 58, ../scss/_my-code.scss */
+/* line 67, ../scss/_my-code.scss */
 .bar {
   width: 100%;
   height: 2px;
@@ -8894,37 +8904,37 @@ input {
   pointer-events: none;
 }
 
-/* line 73, ../scss/_my-code.scss */
+/* line 82, ../scss/_my-code.scss */
 .bar-1 {
   top: 0px;
 }
 
-/* line 76, ../scss/_my-code.scss */
+/* line 85, ../scss/_my-code.scss */
 .bar-2 {
   top: 9px;
 }
 
-/* line 79, ../scss/_my-code.scss */
+/* line 88, ../scss/_my-code.scss */
 .bar-3 {
   top: 18px;
 }
 
-/* line 82, ../scss/_my-code.scss */
+/* line 91, ../scss/_my-code.scss */
 .txt {
   display: none;
 }
 
 /* ===------ Burger 1 ------=== */
-/* line 91, ../scss/_my-code.scss */
+/* line 100, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-1 {
   top: 18px;
   transform: rotate(45deg);
 }
-/* line 96, ../scss/_my-code.scss */
+/* line 105, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-2 {
   left: -100%;
 }
-/* line 99, ../scss/_my-code.scss */
+/* line 108, ../scss/_my-code.scss */
 .burger-1 input:checked ~ label .bar-3 {
   top: 18px;
   transform: rotate(-45deg);
@@ -8963,62 +8973,70 @@ input {
   }
 }
 /* ===------ Burger 3 ------=== */
-/* line 161, ../scss/_my-code.scss */
+/* line 170, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label {
   transform: rotate(90deg);
 }
-/* line 164, ../scss/_my-code.scss */
+/* line 173, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-1 {
   top: 18px;
   transform: rotate(45deg);
 }
-/* line 168, ../scss/_my-code.scss */
+/* line 177, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-2 {
   left: 100%;
 }
-/* line 171, ../scss/_my-code.scss */
+/* line 180, ../scss/_my-code.scss */
 .burger-3 input:checked ~ label .bar-3 {
   top: 18px;
   transform: rotate(-45deg);
 }
 
-/* line 178, ../scss/_my-code.scss */
+/* line 186, ../scss/_my-code.scss */
+.w {
+  width: 100%;
+}
+
+/* line 189, ../scss/_my-code.scss */
 #MenuLine {
+  position: fixed;
   background: #feb31c;
   padding: 19px 25px;
+  z-index: 99999;
 }
-/* line 181, ../scss/_my-code.scss */
+/* line 194, ../scss/_my-code.scss */
 #MenuLine .u {
   display: inline-block;
   padding-left: 30px;
   margin-top: 5px;
 }
-/* line 185, ../scss/_my-code.scss */
+/* line 198, ../scss/_my-code.scss */
 #MenuLine .u h4 {
   line-height: 0.6;
   padding: 0;
   font-weight: bold !important;
 }
-/* line 190, ../scss/_my-code.scss */
+/* line 203, ../scss/_my-code.scss */
 #MenuLine .u a {
   color: #000 !important;
 }
-/* line 194, ../scss/_my-code.scss */
+/* line 207, ../scss/_my-code.scss */
 #MenuLine .r > input {
   height: 30px;
   width: 100px;
 }
-/* line 198, ../scss/_my-code.scss */
+/* line 211, ../scss/_my-code.scss */
 #MenuLine > .btn {
-  margin-top: 13px;
+  margin-top: 10px;
+  padding: 10px;
 }
 
-/* line 205, ../scss/_my-code.scss */
+/* line 216, ../scss/_my-code.scss */
 .btn.btn-white:hover {
   background: #fffffff5 !important;
 }
 
-/* line 206, ../scss/_my-code.scss */
+/* line 217, ../scss/_my-code.scss */
 #MenuIcon {
   height: 37px;
   width: 37px;
@@ -9026,30 +9044,35 @@ input {
   display: inline-block;
   position: relative;
 }
-/* line 212, ../scss/_my-code.scss */
+/* line 223, ../scss/_my-code.scss */
 #MenuIcon:hover {
   cursor: pointer;
 }
 
-/* line 216, ../scss/_my-code.scss */
+/* line 227, ../scss/_my-code.scss */
 #logo {
   background: #4d9db8;
   height: 100px;
   width: 240px;
   color: #fff;
 }
-/* line 222, ../scss/_my-code.scss */
+/* line 233, ../scss/_my-code.scss */
 #logo h4 {
   font-weight: bold;
   display: inline-block;
 }
-/* line 226, ../scss/_my-code.scss */
+/* line 237, ../scss/_my-code.scss */
 #logo img {
   display: inline-block;
   padding: 38px 15px;
 }
 
-/* line 231, ../scss/_my-code.scss */
+/* line 242, ../scss/_my-code.scss */
+.white {
+  background: #fff;
+}
+
+/* line 245, ../scss/_my-code.scss */
 #MainMenu {
   height: 100vh;
   width: 240px;
@@ -9057,28 +9080,32 @@ input {
   position: fixed;
   left: 0px;
   top: 0;
+  z-index: 99999;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-/* line 238, ../scss/_my-code.scss */
+/* line 254, ../scss/_my-code.scss */
 #MainMenu a {
   display: inline-block;
 }
-/* line 241, ../scss/_my-code.scss */
+/* line 257, ../scss/_my-code.scss */
 #MainMenu p {
   display: inline-block;
 }
-/* line 244, ../scss/_my-code.scss */
+/* line 260, ../scss/_my-code.scss */
 #MainMenu img {
   display: inline-block;
 }
 
-/* line 248, ../scss/_my-code.scss */
+/* line 264, ../scss/_my-code.scss */
 ul {
   font-size: 14px;
   font-weight: bold;
   list-style: none;
   padding-left: 0;
 }
-/* line 253, ../scss/_my-code.scss */
+/* line 269, ../scss/_my-code.scss */
 ul li {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -9087,34 +9114,137 @@ ul li {
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-/* line 258, ../scss/_my-code.scss */
+/* line 274, ../scss/_my-code.scss */
 ul li p {
   margin: 0;
   margin-left: 26px;
 }
-/* line 262, ../scss/_my-code.scss */
+/* line 278, ../scss/_my-code.scss */
 ul li:hover {
   background: #104151;
 }
 
-/* line 267, ../scss/_my-code.scss */
+/* line 283, ../scss/_my-code.scss */
 .active {
   border-left: 3px solid #fff;
   padding-left: 30px !important;
 }
-/* line 270, ../scss/_my-code.scss */
+/* line 286, ../scss/_my-code.scss */
 .active > a {
   color: #fff !important;
 }
 
-/* line 274, ../scss/_my-code.scss */
+/* line 290, ../scss/_my-code.scss */
 .float-right {
   float: right;
 }
 
-/* line 277, ../scss/_my-code.scss */
+/* line 293, ../scss/_my-code.scss */
 .input-group[class*="col-"] {
   float: right;
   top: 14px;
   margin-right: 100px;
+}
+
+/* line 298, ../scss/_my-code.scss */
+div.dropdown {
+  float: right;
+  top: 17px;
+  background: transparent !important;
+  margin-left: 35px;
+  display: inline-block !important;
+}
+/* line 304, ../scss/_my-code.scss */
+div.dropdown .btn {
+  box-shadow: none !important;
+  background: transparent !important;
+  border: none;
+}
+/* line 309, ../scss/_my-code.scss */
+div.dropdown a {
+  background: transparent !important;
+  display: block !important;
+}
+
+/* line 314, ../scss/_my-code.scss */
+.btn {
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+/* line 316, ../scss/_my-code.scss */
+.btn:focus {
+  outline: 0 !important;
+}
+
+/* line 320, ../scss/_my-code.scss */
+.dropdown-menu {
+  background: #feca61;
+  padding: 0;
+  border: none;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+/* line 325, ../scss/_my-code.scss */
+.dropdown-menu a {
+  color: #fff;
+}
+/* line 328, ../scss/_my-code.scss */
+.dropdown-menu > .dropdown-item {
+  padding: 20px 0px;
+  padding-left: 20px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+/* line 332, ../scss/_my-code.scss */
+.dropdown-menu > .dropdown-item:hover {
+  background: #feb31c !important;
+}
+
+/* line 337, ../scss/_my-code.scss */
+.form-control {
+  box-shadow: none;
+}
+
+/* line 340, ../scss/_my-code.scss */
+.table {
+  border: 1px solid #ccc;
+}
+
+/* line 343, ../scss/_my-code.scss */
+.table > thead {
+  color: #feb31c;
+}
+/* line 345, ../scss/_my-code.scss */
+.table > thead > tr > th {
+  padding: 15px 30px;
+}
+
+/* line 349, ../scss/_my-code.scss */
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  border: 1px solid #ccc;
+}
+
+/* line 352, ../scss/_my-code.scss */
+.table > tbody > tr > th, td {
+  padding: 30px !important;
+  padding-bottom: 18px !important;
+}
+/* line 355, ../scss/_my-code.scss */
+.table > tbody > tr > th > p, td > p {
+  display: inline-block;
+  color: #aaa;
+}
+
+/* line 360, ../scss/_my-code.scss */
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background: #fcfcfc;
+}
+
+/* line 363, ../scss/_my-code.scss */
+.p {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
